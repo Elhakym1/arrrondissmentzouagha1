@@ -1,0 +1,24 @@
+<main style="max-width: 900px; margin: 50px auto; padding: 20px; background: #fff; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); font-family: Arial, sans-serif;">
+    <h1 style="text-align: center; color: #2b6cb0; margin-bottom: 30px;">أحدث الأخبار من صفحة المقاطعة </h1>
+    
+    
+    <h2 id="loading-message" style="text-align: center; color: #999; margin-bottom: 20px; transition: opacity 1s ease;">
+      انتظر قليلًا لتحميل الصفحة...
+    </h2>
+  
+    <div style="display: flex; justify-content: center;">
+      <iframe
+        id="fb-frame"
+        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100064732177394&tabs=timeline&width=500&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
+        width="500"
+        height="600"
+        style="border:none;overflow:hidden"
+        scrolling="no"
+        frameborder="0"
+        allowfullscreen="true"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        onload="document.getElementById('loading-message').style.opacity = 0;">
+      </iframe>
+    </div>
+  </main>
+  
