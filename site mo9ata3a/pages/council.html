@@ -1,0 +1,191 @@
+<main class="content">
+  <div id="top"></div>
+
+  <div class="tree">
+    
+    <div class="level">
+      <div class="box red">
+        <img src="i/3odw1.jpg" alt="صورة إسماعيل جاي" class="avatar">
+        <div class="name">اسماعيل جاي منصوري</div>
+        <div class="role">رئيس مجلس مقاطعة زواغة</div>
+      </div>
+    </div>
+
+    
+    <div class="level">
+      <div class="box">
+        <img src="i/3odw2.jpg" alt="عبد الله الهادف" class="avatar">
+        <div class="name">عبد الله الهادف</div>
+        <div class="role">النائب الأول</div>
+      </div>
+      <div class="box">
+        <img src="i/3odw3.jpg" alt="الخمار سموح" class="avatar">
+        <div class="name">الخمار سموح</div>
+        <div class="role">النائب الثاني</div>
+      </div>
+      <div class="box">
+        <img src="3odw4.jpg" alt="بدر العكري" class="avatar">
+        <div class="name">بدر العكري</div>
+        <div class="role">النائب الثالث</div>
+      </div>
+      <div class="box">
+        <img src="i/3odw5.jpg" alt="محمد حضيض" class="avatar">
+        <div class="name">محمد حضيض</div>
+        <div class="role">النائب الرابع</div>
+      </div>
+      <div class="box">
+        <img src="i/3odw6.jpg" alt="أسامة الإدريسي" class="avatar">
+        <div class="name">أسامة الإدريسي</div>
+        <div class="role">النائب الخامس</div>
+      </div>
+      <div class="box">
+        <img src="i/3odw7.jpg" alt="علي الزعيم" class="avatar">
+        <div class="name">علي الزعيم</div>
+        <div class="role">النائب السادس</div>
+      </div>
+      <div class="box">
+        <img src="i/3odw8.jpg" alt="سعيد البحري" class="avatar">
+        <div class="name">سعيد البحري</div>
+        <div class="role">النائب السابع</div>
+      </div>
+    </div>
+
+    
+    <div class="level">
+      <div class="box">
+        <img src="i/3odw12.jpg" alt="سعاد عياش" class="avatar">
+        <div class="name">سعاد عياش</div>
+        <div class="role">كاتبة المجلس</div>
+      </div>
+      <div class="box">
+        <img src="i/3odw11.jpg" alt="محمد العيادي" class="avatar">
+        <div class="name">محمد العيادي</div>
+        <div class="role">نائب كاتب المجلس</div>
+      </div>
+    </div>
+  </div>
+
+  
+  <button id="backToTop" class="back-to-top" title="العودة للأعلى">↑</button>
+
+  <style>
+    main.content {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      font-family: 'Segoe UI', sans-serif;
+      position: relative;
+    }
+
+    .tree {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    .level {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .box {
+      background: #3498db;
+      color: #fff;
+      border-radius: 10px;
+      padding: 15px 20px;
+      text-align: center;
+      width: 180px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .box.red {
+      background: #a94442;
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #fff;
+      margin-bottom: 10px;
+    }
+
+    .name {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .role {
+      font-size: 14px;
+      margin-top: 4px;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 45px;
+      height: 45px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      font-size: 22px;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .back-to-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background-color: #2980b9;
+    }
+
+    @media (max-width: 768px) {
+      .box {
+        width: 140px;
+      }
+
+      .avatar {
+        width: 60px;
+        height: 60px;
+      }
+
+      .name {
+        font-size: 14px;
+      }
+
+      .role {
+        font-size: 12px;
+      }
+    }
+  </style>
+
+  <script>
+    const backToTop = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 200) {
+        backToTop.classList.add("show");
+      } else {
+        backToTop.classList.remove("show");
+      }
+    });
+
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+</main>
